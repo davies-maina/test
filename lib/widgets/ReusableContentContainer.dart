@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pilar/constants.dart';
 
+import '../constants.dart';
+
 SizedBox contentContainer(String text) {
   return SizedBox(
     child: SingleChildScrollView(
@@ -8,9 +10,10 @@ SizedBox contentContainer(String text) {
         child: Text(
           text,
           style: TextStyle(
-            fontFamily: 'Overlock-Regular',
+            fontFamily: kSecondaryFont,
             fontSize: 14,
             color: const Color(0xffffffff),
+            height: 1.3571428571428572,
           ),
           textAlign: TextAlign.left,
         )),

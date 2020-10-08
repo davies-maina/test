@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilar/constants.dart';
 
+import '../constants.dart';
+
 Container graphicalPart(String title, String outSvg, String inSvg) {
   return Container(
     padding: EdgeInsets.only(top: 20),
@@ -17,9 +19,9 @@ Container graphicalPart(String title, String outSvg, String inSvg) {
           child: Text(
             title,
             style: TextStyle(
-              fontFamily: 'Overlock-Regular',
+              fontFamily: kSecondaryFont,
               fontSize: 14,
-              color: KTitleColor,
+              color: kTitleColor,
               height: 1.3571428571428572,
             ),
             textAlign: TextAlign.center,
