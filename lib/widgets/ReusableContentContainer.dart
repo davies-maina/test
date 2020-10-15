@@ -3,10 +3,11 @@ import 'package:pilar/constants.dart';
 
 import '../constants.dart';
 
-SizedBox contentContainer(String text) {
+SizedBox contentContainer(
+    {String text, double top, double bottom, double right, double left}) {
   return SizedBox(
     child: SingleChildScrollView(
-        padding: EdgeInsets.only(left: 50, right: 50, top: 20),
+        padding: EdgeInsets.only(left: left, right: right, top: top),
         child: Text(
           text,
           style: TextStyle(

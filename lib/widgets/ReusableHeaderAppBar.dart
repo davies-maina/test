@@ -14,8 +14,11 @@ AppBar header(context,
     // automaticallyImplyLeading: hideBackButton ? false : true,
     leading: hideBackButton
         ? null
-        : new IconButton(
-            icon: new Icon(Icons.arrow_back_ios, color: Colors.white),
+        : IconButton(
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
+            ),
             onPressed: () => Navigator.of(context).pop(),
           ),
     title: Container(

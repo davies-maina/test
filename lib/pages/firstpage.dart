@@ -26,11 +26,19 @@ class _FirstPageState extends State<FirstPage> {
         child: Column(
           children: [
             contentContainer(
-                'En el despacho de Abogado Extranjería Madrid, contamos con abogados especialistas en materia de derecho de inmigración.En la situación actual española, la migración se está intensificando por momentos, por ello es un tema con el que convivimos día y día. Gracias a ello y tras años de trabajo y experiencia, sabemos cómo obtener resultados llenos de profesionalidad y gratitud para nuestro cliente.'),
+                text:
+                    'En el despacho de Abogado Extranjería Madrid, contamos con abogados especialistas en materia de derecho de inmigración.En la situación actual española, la migración se está intensificando por momentos, por ello es un tema con el que convivimos día y día. Gracias a ello y tras años de trabajo y experiencia, sabemos cómo obtener resultados llenos de profesionalidad y gratitud para nuestro cliente.',
+                top: 20,
+                right: 50,
+                left: 50),
             Divider(),
             secondaryTitle('Especialidades'),
             contentContainer(
-                'En el despacho de Abogado Extranjería Madrid, contamos con abogados especialistas en materia de derecho de inmigración.'),
+                text:
+                    'Ab illo tempore, ab est sed immemorabili. Quo usque tandem abutere, Catilina, patientia nostra? Pellentesque habitant morbi tristique senectus et netus, abio vel iudice vincam, sunt in culpa qui officia. Mercedem aut nummos unde unde extricat, amaras.',
+                top: 20,
+                right: 50,
+                left: 50),
             Column(
               children: [
                 SizedBox(
@@ -54,9 +62,14 @@ class _FirstPageState extends State<FirstPage> {
               ],
             ),
             Divider(),
+            // left: 50,right: 50,top: 20
             secondaryTitle('RECURSOS LABORALES'),
             contentContainer(
-                'Ab illo tempore, ab est sed immemorabili. Quo usque tandem abutere, Catilina, patientia nostra? Pellentesque habitant morbi tristique senectus et netus, abio vel iudice vincam, sunt in culpa qui officia. Mercedem aut nummos unde unde extricat, amaras.'),
+                text:
+                    'Ab illo tempore, ab est sed immemorabili. Quo usque tandem abutere, Catilina, patientia nostra? Pellentesque habitant morbi tristique senectus et netus, abio vel iudice vincam, sunt in culpa qui officia. Mercedem aut nummos unde unde extricat, amaras.',
+                top: 20,
+                right: 50,
+                left: 50)
           ],
         ),
       ),

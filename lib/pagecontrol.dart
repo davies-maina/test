@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:pilar/pages/thirdpage.dart';
+import 'package:pilar/pages/articlespage.dart';
+import 'package:pilar/pages/login.dart';
+import 'package:pilar/pages/profile.dart';
+import 'package:pilar/pages/thirdPage.dart';
 import 'constants.dart';
 import 'pages/secondpage.dart';
 import 'pages/firstpage.dart';
@@ -40,7 +43,14 @@ class _PageControlState extends State<PageControl> {
     return Scaffold(
       backgroundColor: kMainBgColor,
       body: PageView(
-        children: <Widget>[FirstPage(), SecondPage(), ThirdPage()],
+        children: <Widget>[
+          FirstPage(),
+          SecondPage(),
+          ThirdPage(),
+          ArticlesPage(),
+          LoginPage(),
+          ProfilePage()
+        ],
         controller: pageController,
         onPageChanged: whenPageChanges,
         physics: NeverScrollableScrollPhysics(),
@@ -52,9 +62,12 @@ class _PageControlState extends State<PageControl> {
           activeColor: kTitleColor,
           inactiveColor: kTextContentColor,
           items: [
+            BottomNavigationBarItem(icon: Icon(Icons.accessibility)),
             BottomNavigationBarItem(icon: Icon(Icons.home)),
             BottomNavigationBarItem(icon: Icon(Icons.title)),
-            BottomNavigationBarItem(icon: Icon(Icons.ac_unit))
+            BottomNavigationBarItem(icon: Icon(Icons.ac_unit)),
+            BottomNavigationBarItem(icon: Icon(Icons.contact_phone)),
+            BottomNavigationBarItem(icon: Icon(Icons.verified_user)),
           ]),
     );
   }

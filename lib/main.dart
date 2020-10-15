@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: kThemeData,
-      home: PageControl(), //route index
+      home: PageControl(),
     );
   }
 }
