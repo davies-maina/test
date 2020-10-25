@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pilar/constants.dart';
+import 'package:pilar/pages/thirdPage.dart';
 import 'package:pilar/svg.dart';
 import 'package:pilar/widgets/ReusableHeaderAppBar.dart';
 import 'package:pilar/widgets/ReusableGraphical.dart';
@@ -18,13 +19,19 @@ class _SecondPageState extends State<SecondPage> {
           color: kMainBgColor,
           child: Column(
             children: [
-              SizedBox(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    graphicalPart('Documento y plantillas', boxSvg, null),
-                    graphicalPart('Accidentes', boxSvg, null),
-                  ],
+              GestureDetector(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ThirdPage()),
+                ),
+                child: SizedBox(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      graphicalPart('Documento y plantillas', boxSvg, null),
+                      graphicalPart('Accidentes', boxSvg, null),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(
