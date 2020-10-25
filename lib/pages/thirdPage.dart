@@ -22,7 +22,7 @@ class _ThirdPageState extends State<ThirdPage> {
           currentPageTitle: 'Documentos y plantillas', hideBackButton: false),
       body: Container(
         color: kMainBgColor,
-        child: Column(
+        child: ListView(
           children: [
             contentContainer(
                 text:
@@ -34,35 +34,31 @@ class _ThirdPageState extends State<ThirdPage> {
             Divider(),
             secondaryTitle('Trabajo y formación'),
             Divider(),
-            Expanded(
-              child: ListView(
-                children: [
-                  generateListWithHrLine('Contrato de trabajo indefinido'),
-                  generateListWithHrLine('Contrato de trabajo temporal'),
-                  generateListWithHrLine('Contrato de trabajo formativo'),
-                  generateListWithHrLine('Contrato de trabajo de relevo'),
-                  generateListWithHrLine('Contrato de trabajo freelance'),
-                  generateListWithHrLine('Contrato de trabajo freelance'),
-                ],
-              ),
+            Column(
+              children: [
+                generateListWithHrLine('Contrato de trabajo indefinido'),
+                generateListWithHrLine('Contrato de trabajo temporal'),
+                generateListWithHrLine('Contrato de trabajo formativo'),
+                generateListWithHrLine('Contrato de trabajo de relevo'),
+                generateListWithHrLine('Contrato de trabajo freelance'),
+                generateListWithHrLine('Contrato de trabajo freelance'),
+              ],
             ),
             secondaryTitle('Vivienda y bienes'),
             Divider(),
-            Expanded(
-              child: ListView(
-                children: [
-                  generateListWithHrLine('Contrato de trabajo indefinido'),
-                  generateListWithHrLine('Contrato de trabajo temporal'),
-                  generateListWithHrLine('Contrato de trabajo formativo'),
-                  generateListWithHrLine('Contrato de trabajo de relevo'),
-                  generateListWithHrLine('Contrato de trabajo freelance'),
-                  generateListWithHrLine('Contrato de trabajo freelance'),
-                  generateListWithHrLine('Contrato de trabajo freelance'),
-                  generateListWithHrLine('Contrato de trabajo freelance'),
-                  generateListWithHrLine('Contrato de trabajo freelance'),
-                  generateListWithHrLine('Contrato de trabajo freelance'),
-                ],
-              ),
+            Column(
+              children: [
+                generateListWithHrLine('Contrato de trabajo indefinido'),
+                generateListWithHrLine('Contrato de trabajo temporal'),
+                generateListWithHrLine('Contrato de trabajo formativo'),
+                generateListWithHrLine('Contrato de trabajo de relevo'),
+                generateListWithHrLine('Contrato de trabajo freelance'),
+                generateListWithHrLine('Contrato de trabajo freelance'),
+                generateListWithHrLine('Contrato de trabajo freelance'),
+                generateListWithHrLine('Contrato de trabajo freelance'),
+                generateListWithHrLine('Contrato de trabajo freelance'),
+                generateListWithHrLine('Contrato de trabajo freelance'),
+              ],
             ),
           ],
         ),

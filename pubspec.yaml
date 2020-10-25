@@ -68,3 +68,7 @@ flutter:
       fonts:
          - asset: assets/Overlock-Regular.ttf
 
+    - family:  infoicon
+      fonts:
+        - asset: assets/fonts/infoicon.ttf
+

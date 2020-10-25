@@ -23,7 +23,7 @@ class _FirstPageState extends State<FirstPage> {
           hideBackButton: true),
       body: Container(
         color: kMainBgColor,
-        child: Column(
+        child: ListView(
           children: [
             contentContainer(
                 text:

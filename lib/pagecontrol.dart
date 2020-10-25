@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:pilar/pages/articlespage.dart';
+import 'package:pilar/pages/ArticlesPage.dart';
 import 'package:pilar/pages/login.dart';
 import 'package:pilar/pages/profile.dart';
 import 'package:pilar/pages/thirdPage.dart';
 import 'constants.dart';
 import 'pages/secondpage.dart';
 import 'pages/firstpage.dart';
+
+// import CustomIcons from 'presentations/my_flutter_app_icons.dart';
 
 class PageControl extends StatefulWidget {
   @override
@@ -46,10 +48,10 @@ class _PageControlState extends State<PageControl> {
         children: <Widget>[
           FirstPage(),
           SecondPage(),
-          ThirdPage(),
-          ArticlesPage(),
           LoginPage(),
-          ProfilePage()
+          // ThirdPage(),
+          // ArticlesPage(),
+          // ProfilePage()
         ],
         controller: pageController,
         onPageChanged: whenPageChanges,
@@ -62,12 +64,12 @@ class _PageControlState extends State<PageControl> {
           activeColor: kTitleColor,
           inactiveColor: kTextContentColor,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.accessibility)),
+            BottomNavigationBarItem(icon: Icon(Icons.access_time)),
             BottomNavigationBarItem(icon: Icon(Icons.home)),
             BottomNavigationBarItem(icon: Icon(Icons.title)),
-            BottomNavigationBarItem(icon: Icon(Icons.ac_unit)),
-            BottomNavigationBarItem(icon: Icon(Icons.contact_phone)),
-            BottomNavigationBarItem(icon: Icon(Icons.verified_user)),
+            // BottomNavigationBarItem(icon: Icon(Icons.ac_unit)),
+            // BottomNavigationBarItem(icon: Icon(Icons.contact_phone)),
+            // BottomNavigationBarItem(icon: Icon(Icons.verified_user)),
           ]),
     );
   }
