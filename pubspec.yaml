@@ -25,6 +25,8 @@ dependencies:
     sdk: flutter
   flutter_svg: ^0.18.0
   adobe_xd: ^1.0.0+1
+  get_it: ^5.0.1
+  http: ^0.12.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -68,7 +70,7 @@ flutter:
       fonts:
          - asset: assets/Overlock-Regular.ttf
 
-    - family:  infoicon
+    - family:  InfoIcon
       fonts:
-        - asset: assets/fonts/infoicon.ttf
+        - asset: assets/fonts/InfoIcon.ttf
 

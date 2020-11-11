@@ -4,6 +4,7 @@ import 'package:pilar/pages/ArticlesPage.dart';
 import 'package:pilar/pages/login.dart';
 import 'package:pilar/pages/profile.dart';
 import 'package:pilar/pages/thirdPage.dart';
+import 'package:pilar/presentations/my_custom_icons_icons.dart';
 import 'constants.dart';
 import 'pages/secondpage.dart';
 import 'pages/firstpage.dart';
@@ -64,7 +65,7 @@ class _PageControlState extends State<PageControl> {
           activeColor: kTitleColor,
           inactiveColor: kTextContentColor,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.access_time)),
+            BottomNavigationBarItem(icon: Icon(MyCustomIcons.icon1)),
             BottomNavigationBarItem(icon: Icon(Icons.home)),
             BottomNavigationBarItem(icon: Icon(Icons.title)),
             // BottomNavigationBarItem(icon: Icon(Icons.ac_unit)),
