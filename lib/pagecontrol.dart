@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:pilar/models/User.dart';
 import 'package:pilar/pages/ArticlesPage.dart';
 import 'package:pilar/pages/login.dart';
 import 'package:pilar/pages/profile.dart';
@@ -40,6 +41,8 @@ class _PageControlState extends State<PageControl> {
     pageController.animateToPage(pageIndex,
         duration: Duration(microseconds: 400), curve: Curves.bounceInOut);
   }
+
+  final UserModel user = UserModel();
 
   @override
   Widget build(BuildContext context) {
