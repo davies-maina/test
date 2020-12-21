@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constants.dart';
-import '../svg.dart';
 
 Column generateListWithHrLine(String title) {
   return Column(
@@ -30,7 +29,7 @@ Column generateListWithHrLine(String title) {
         ],
       ),
       SvgPicture.string(
-        hrLine,
+        'asd',
         allowDrawingOutsideViewBox: true,
       ),
     ],

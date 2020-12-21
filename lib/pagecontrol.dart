@@ -1,16 +1,12 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:pilar/models/Custom_icons.dart';
 import 'package:pilar/models/User.dart';
-import 'package:pilar/pages/ArticlesPage.dart';
-import 'package:pilar/pages/login.dart';
-import 'package:pilar/pages/profile.dart';
-import 'package:pilar/pages/thirdPage.dart';
-import 'package:pilar/presentations/my_custom_icons_icons.dart';
-import 'constants.dart';
-import 'pages/secondpage.dart';
-import 'pages/firstpage.dart';
+import 'package:pilar/pages/Login.dart';
 
-// import CustomIcons from 'presentations/my_flutter_app_icons.dart';
+import 'constants.dart';
+import 'pages/Inicio.dart';
+import 'pages/Recursos.dart';
 
 class PageControl extends StatefulWidget {
   @override
@@ -50,7 +46,7 @@ class _PageControlState extends State<PageControl> {
       backgroundColor: kMainBgColor,
       body: PageView(
         children: <Widget>[
-          FirstPage(),
+          HomePage(),
           SecondPage(),
           LoginPage(),
           // ThirdPage(),
@@ -66,11 +62,25 @@ class _PageControlState extends State<PageControl> {
           currentIndex: getPageIndex,
           onTap: changePage,
           activeColor: kTitleColor,
-          inactiveColor: kTextContentColor,
           items: [
-            BottomNavigationBarItem(icon: Icon(MyCustomIcons.icon1)),
-            BottomNavigationBarItem(icon: Icon(Icons.home)),
-            BottomNavigationBarItem(icon: Icon(Icons.title)),
+            BottomNavigationBarItem(
+              icon: Icon(Pilar.inicio),
+              label: 'Inicio',
+            ),
+            BottomNavigationBarItem(
+              icon: Container(
+                child: Icon(
+                  Pilar.recursos,
+                  size: 25,
+                ),
+                margin: EdgeInsets.only(right: 10),
+              ),
+              label: 'Recursos',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Pilar.perfil),
+              label: 'Perfil',
+            ),
             // BottomNavigationBarItem(icon: Icon(Icons.ac_unit)),
             // BottomNavigationBarItem(icon: Icon(Icons.contact_phone)),
             // BottomNavigationBarItem(icon: Icon(Icons.verified_user)),

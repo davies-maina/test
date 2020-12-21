@@ -1,6 +1,6 @@
-import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'package:http/http.dart' as http;
 import 'package:pilar/models/User.dart';
 
 // The rang of the Accepted HTTP Status
@@ -15,8 +15,10 @@ Future<UserModel> loginUser(String email, String password) async {
   if (response.statusCode >= HTTP_MIN_STATUS &&
       response.statusCode <= HTTP_MAX_STATUS) {
     var jsonString = response.body;
+    print('Success, log in correct');
     return UserModel.fromJson(json.decode(jsonString));
   } else {
+    print(response.statusCode);
     return null;
   }
 }

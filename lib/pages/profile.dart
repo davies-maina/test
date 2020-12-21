@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
-import '../svg.dart';
-import '../widgets/ReusableGraphical.dart';
+import '../widgets/ReusableWidgets.dart';
 
 class ProfilePage extends StatelessWidget {
   @override
@@ -17,8 +16,8 @@ class ProfilePage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    graphicalPart('Mis casos', boxSvg, null),
-                    graphicalPart('Notifications', boxSvg, null),
+                    invertedCorners('Mis casos', 'silla.png'),
+                    invertedCorners('Notifications', 'silla.png'),
                   ],
                 ),
               ),
@@ -26,22 +25,21 @@ class ProfilePage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    graphicalPart('Liamanos', boxSvg, null),
-                    graphicalPart('Whatsapp', boxSvg, null),
+                    invertedCorners('Liamanos', 'silla.png'),
+                    invertedCorners('Whatsapp', 'silla.png'),
                   ],
                 ),
               ),
               SizedBox(
                 child: Column(
                   children: [
-                    graphicalPart(
-                        'abogadapilarramos@gmail.com', wideBoxSvg, null)
+                    invertedCorners('abogadapilarramos@gmail.com', 'silla.png')
                   ],
                 ),
               ),
               SizedBox(
                 child: Column(
-                  children: [graphicalPart('Cerrar Sesión', wideBoxSvg, null)],
+                  children: [invertedCorners('Cerrar Sesión', 'silla.png')],
                 ),
               )
             ],

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:pilar/pagecontrol.dart';
-import 'package:pilar/pages/firstpage.dart';
+
 import 'constants.dart';
 
 // void setupLocator() {
