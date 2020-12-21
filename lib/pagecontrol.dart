@@ -49,9 +49,6 @@ class _PageControlState extends State<PageControl> {
           HomePage(),
           SecondPage(),
           LoginPage(),
-          // ThirdPage(),
-          // ArticlesPage(),
-          // ProfilePage()
         ],
         controller: pageController,
         onPageChanged: whenPageChanges,
@@ -81,9 +78,6 @@ class _PageControlState extends State<PageControl> {
               icon: Icon(Pilar.perfil),
               label: 'Perfil',
             ),
-            // BottomNavigationBarItem(icon: Icon(Icons.ac_unit)),
-            // BottomNavigationBarItem(icon: Icon(Icons.contact_phone)),
-            // BottomNavigationBarItem(icon: Icon(Icons.verified_user)),
           ]),
     );
   }

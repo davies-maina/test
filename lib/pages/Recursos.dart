@@ -11,9 +11,9 @@ class SecondPage extends StatefulWidget {
 class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
-        Divider(height: 110),
+        Divider(height: 80),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
