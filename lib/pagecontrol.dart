@@ -50,8 +50,8 @@ class _PageControlState extends State<PageControl> {
       backgroundColor: kMainBgColor,
       body: PageView(
         children: <Widget>[
-          // HomePage(),
-          ProfilePage(),
+          HomePage(),
+          // ProfilePage(),
           SecondPage(),
           LoginPage(),
         ],
