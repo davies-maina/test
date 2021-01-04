@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilar/pages/ArticleWebview.dart';
 import 'package:pilar/widgets/ReusableImageTextOverlay.dart';
 
 import '../constants.dart';
@@ -14,84 +17,61 @@ class _ArticlesPageState extends State<ArticlesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: header(context, isAppTitle: false, currentPageTitle: 'Artículos'),
-      body: Container(
-        color: kMainBgColor,
-        padding: EdgeInsets.only(top: 20, bottom: 10, left: 30, right: 30),
+      backgroundColor: kMainBgColor,
+      appBar: header(context,
+          isAppTitle: false, currentPageTitle: 'Artículos', shareButton: true),
+      body: Padding(
+        padding: const EdgeInsets.all(40.0),
         child: ListView(
           children: [
-            Row(
-              children: [
-                imageTextOverlay(),
-              ],
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: textContainer(
+            Container(
+              child: Column(
+                children: [
+                  GestureDetector(
+                    child: imageTextOverlay(MediaQuery.of(context).size.width),
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ArticleWebview()),
+                    ),
+                  ),
+                  textContainer(
                     text:
                         'La confianza en el director del banco ha ocasionado grandes perjuicios económicos a muchas familiasDe hecho, ha sido esta táctica la que ha originado muchas de las cláusulas suelo hoy objeto de reclamación',
                   ),
-                ),
-              ],
-            ),
-            Divider(),
-            SvgPicture.string(
-              'hrLine',
-              allowDrawingOutsideViewBox: true,
-            ),
-            Divider(),
-            Row(
-              children: [
-                imageTextOverlay(),
-                Expanded(
-                  child: textContainer(
-                    text:
-                        'La confianza en el director del banco ha ocasionado grandes perjuicios económicos a muchas familiasDe hecho, ha sido esta táctica la que ha originado muchas de las cláusulas suelo hoy objeto de reclamación',
+                  Divider(
+                    color: kTitleColor,
                   ),
-                ),
-              ],
-            ),
-            Divider(),
-            SvgPicture.string(
-              'hrLine',
-              allowDrawingOutsideViewBox: true,
-            ),
-            Divider(),
-            Row(
-              children: [
-                Expanded(
-                  child: textContainer(
-                    text:
-                        'La confianza en el director del banco ha ocasionado grandes perjuicios económicos a muchas familiasDe hecho, ha sido esta táctica la que ha originado muchas de las cláusulas suelo hoy objeto de reclamación',
+                  Row(
+                    children: [
+                      imageTextOverlay(null),
+                      Expanded(
+                        child: textContainer(
+                          text:
+                              'La confianza en el director del banco ha ocasionado grandes perjuicios económicos a muchas familiasDe hecho, ha sido esta táctica la que ha originado muchas de las cláusulas suelo hoy objeto de reclamación',
+                        ),
+                      )
+                    ],
                   ),
-                ),
-                imageTextOverlay(),
-              ],
-            ),
-            Divider(),
-            SvgPicture.string(
-              'hrLine',
-              allowDrawingOutsideViewBox: true,
-            ),
-            Divider(),
-            Row(
-              children: [
-                imageTextOverlay(),
-                Expanded(
-                  child: textContainer(
-                    text:
-                        'La confianza en el director del banco ha ocasionado grandes perjuicios económicos a muchas familiasDe hecho, ha sido esta táctica la que ha originado muchas de las cláusulas suelo hoy objeto de reclamación',
+                  Divider(
+                    color: kTitleColor,
                   ),
-                ),
-              ],
+                  Row(
+                    children: [
+                      Expanded(
+                        child: textContainer(
+                          text:
+                              'La confianza en el director del banco ha ocasionado grandes perjuicios económicos a muchas familiasDe hecho, ha sido esta táctica la que ha originado muchas de las cláusulas suelo hoy objeto de reclamación',
+                        ),
+                      ),
+                      imageTextOverlay(null),
+                    ],
+                  ),
+                  Divider(
+                    color: kTitleColor,
+                  ),
+                ],
+              ),
             ),
-            Divider(),
-            SvgPicture.string(
-              'hrLine',
-              allowDrawingOutsideViewBox: true,
-            ),
-            Divider(),
           ],
         ),
       ),

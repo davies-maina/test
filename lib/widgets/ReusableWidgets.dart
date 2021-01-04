@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pilar/constants.dart';
 import 'package:pilar/models/Inverted-corners.dart';
+import 'package:esys_flutter_share/esys_flutter_share.dart';
 
 import '../constants.dart';
 
@@ -9,6 +11,7 @@ This is the header of the screens of the app
  */
 AppBar header(context,
     {bool isAppTitle = false,
+    bool shareButton = false,
     String currentPageTitle,
     hideBackButton = false}) {
   return AppBar(
@@ -39,6 +42,22 @@ AppBar header(context,
     ),
     centerTitle: true,
     backgroundColor: kTitleBgColor,
+    actions: shareButton
+        ? null
+        : <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.share_outlined,
+                color: Colors.white,
+              ),
+              onPressed: () async {
+                final ByteData bytes =
+                    await rootBundle.load('assets/pdf/samplepdf.pdf');
+                await Share.file('Share pdf', 'samplepdf.pdf',
+                    bytes.buffer.asUint8List(), 'application/pdf');
+              },
+            )
+          ],
   );
 }
 

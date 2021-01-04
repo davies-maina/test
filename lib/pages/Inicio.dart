@@ -15,7 +15,8 @@ class _FirstPageState extends State<HomePage> {
       appBar: header(context,
           isAppTitle: false,
           currentPageTitle: 'ABOGADOS ESPECIALISTAS',
-          hideBackButton: true),
+          hideBackButton: true,
+          shareButton: true),
       backgroundColor: kMainBgColor,
       body: ListView(
         children: [
@@ -44,7 +45,8 @@ class _FirstPageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Expanded(child: invertedCorners('Despidos', 'images/despidos.png')),
+              Expanded(
+                  child: invertedCorners('Despidos', 'images/despidos.png')),
               Expanded(child: invertedCorners('Laboral', 'images/laboral.png')),
             ],
           ),

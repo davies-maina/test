@@ -5,7 +5,15 @@ import 'package:pilar/pages/profile.dart';
 import 'package:pilar/widgets/progress.dart';
 
 import '../constants.dart';
+import '../pagecontrol.dart';
+import '../pagecontrol.dart';
+import '../pagecontrol.dart';
+import '../pagecontrol.dart';
+import '../pagecontrol.dart';
+import '../pagecontrol.dart';
 import '../widgets/ReusableWidgets.dart';
+import 'Inicio.dart';
+import 'Inicio.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -16,6 +24,7 @@ class _LoginPageState extends State<LoginPage> {
   final _formkey = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final pageControl = PageControl();
 
   bool loading = false;
   @override
@@ -118,14 +127,9 @@ class _LoginPageState extends State<LoginPage> {
                                             showSnackBar(context);
                                           });
                                         } else {
-                                          setState(() {
+                                          setState(() async {
                                             loading = false;
                                           });
-                                          Navigator.of(context).pushReplacement(
-                                              MaterialPageRoute(
-                                                  builder:
-                                                      (BuildContext context) =>
-                                                          ProfilePage()));
                                         }
                                       }
                                     },

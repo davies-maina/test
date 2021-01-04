@@ -3,12 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:pilar/models/Custom_icons.dart';
 import 'package:pilar/models/User.dart';
 import 'package:pilar/pages/Login.dart';
+import 'package:pilar/pages/profile.dart';
 
 import 'constants.dart';
 import 'pages/Inicio.dart';
 import 'pages/Recursos.dart';
 
 class PageControl extends StatefulWidget {
+  final int getPageIndex;
+  PageControl({this.getPageIndex});
   @override
   _PageControlState createState() => _PageControlState();
 }
@@ -30,6 +33,7 @@ class _PageControlState extends State<PageControl> {
   whenPageChanges(int pageIndex) {
     setState(() {
       this.getPageIndex = pageIndex;
+      // print(getPageIndex);
     });
   }
 
@@ -46,7 +50,8 @@ class _PageControlState extends State<PageControl> {
       backgroundColor: kMainBgColor,
       body: PageView(
         children: <Widget>[
-          HomePage(),
+          // HomePage(),
+          ProfilePage(),
           SecondPage(),
           LoginPage(),
         ],

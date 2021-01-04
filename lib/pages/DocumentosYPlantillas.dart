@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pdf_viewer_jk/pdf_viewer_jk.dart';
+import 'package:pilar/pages/PdfView.dart';
+import 'package:pilar/widgets/progress.dart';
 
 import '../constants.dart';
 import '../widgets/ReusableWidgets.dart';
@@ -13,7 +16,9 @@ class _ThirdPageState extends State<ThirdPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: header(context,
-          currentPageTitle: 'Documentos y plantillas', hideBackButton: false),
+          currentPageTitle: 'Documentos y plantillas',
+          hideBackButton: false,
+          shareButton: true),
       backgroundColor: kMainBgColor,
       body: ListView(
         children: <Widget>[
@@ -22,10 +27,16 @@ class _ThirdPageState extends State<ThirdPage> {
                 'Aquí podrás encontrar modelos ya creados para rellenar con tus datos para hacer mas fácil tu vida burocrática',
           ),
           secondaryTitleWithIcon('TRABAJO Y FORMACIÓN', 'images/contrato.png'),
-          ListTile(
-            title: Text(
-              '  Contrato de trabajo indefinido   >',
-              style: TextStyle(color: Colors.white),
+          GestureDetector(
+            child: ListTile(
+              title: Text(
+                '  Contrato de trabajo indefinido   >',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ShowPdf()),
             ),
           ),
           Divider(color: Colors.white),
